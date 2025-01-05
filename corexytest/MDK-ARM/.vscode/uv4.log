@@ -1,8 +1,4 @@
 *** Using Compiler 'V6.22', folder: 'D:\keil\MDK\ARM\ARMCLANG\Bin'
 Build target 'corexytest'
-compiling task.c...
-linking...
-Program Size: Code=11074 RO-data=450 RW-data=16 ZI-data=1536  
-FromELF: creating hex file...
 "corexytest\corexytest.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:00
