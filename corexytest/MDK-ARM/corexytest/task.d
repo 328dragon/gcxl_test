@@ -1,5 +1,5 @@
-corexytest/stm32f4xx_hal_msp.o: ..\Core\Src\stm32f4xx_hal_msp.c \
-  ..\Core\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+corexytest/task.o: ..\BSP\Src\task.c ..\BSP\Inc\task.h ..\Core\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Core\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
@@ -24,4 +24,4 @@ corexytest/stm32f4xx_hal_msp.o: ..\Core\Src\stm32f4xx_hal_msp.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   ..\BSP\Inc\motor.h ..\Core\Inc\tim.h ..\BSP\Inc\serial_rx.h \
-  ..\Core\Inc\usart.h ..\BSP\Inc\task.h
+  ..\Core\Inc\usart.h

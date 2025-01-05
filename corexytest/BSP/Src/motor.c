@@ -5,6 +5,32 @@ int x_now=0;
 int y_now=0;
 float prop=2;
 
+void open()
+{
+__HAL_TIM_SetCompare(&htim4,TIM_CHANNEL_1,250);
+
+}
+void close()
+{
+__HAL_TIM_SetCompare(&htim4,TIM_CHANNEL_1,1250);
+
+}
+void move_z(int z)
+{
+if(z==1)
+{
+  __HAL_TIM_SetCompare(&htim4,TIM_CHANNEL_2,250);
+}else if(z==0)
+{
+  __HAL_TIM_SetCompare(&htim4,TIM_CHANNEL_2,1250);
+
+}
+
+
+}
+
+
+
 void delay_us(uint32_t us)
 {
     uint32_t delay = (HAL_RCC_GetHCLKFreq() / 4000000 * us);

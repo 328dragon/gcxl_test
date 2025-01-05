@@ -19,6 +19,8 @@ extern  int motor_speed;
 extern int x_now;
 extern int y_now;
 #include "main.h"
+#include "tim.h"
+#include "stm32f4xx_hal.h"
 void delay_us(uint32_t us);
 void motor_initial();
 int cal_dir(int cur_x,int des_x,int cur_y,int des_y,int m_flag);
@@ -26,6 +28,10 @@ int cal_step(int cur_x,int des_x,int cur_y,int des_y,int n_flag);
 void move_step(int step_l,int step_r );
 void move_xy(int x,int y);
 void move_motor(int x);
+void open();
+void close();
+void move_z(int z);
+
 // void move_motor(int x);
 
 #endif

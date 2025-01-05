@@ -34,6 +34,9 @@ extern "C" {
 #include "motor.h"
 #include "stdio.h"
 #include "math.h"
+#include "string.h"
+#include "serial_rx.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -83,6 +86,14 @@ void Error_Handler(void);
 #define RMS1_GPIO_Port GPIOB
 #define RMS2_Pin GPIO_PIN_5
 #define RMS2_GPIO_Port GPIOB
+#define a_control_actuator_Pin GPIO_PIN_6
+#define a_control_actuator_GPIO_Port GPIOB
+#define b_control_actuator_Pin GPIO_PIN_7
+#define b_control_actuator_GPIO_Port GPIOB
+#define c_control_actuator_Pin GPIO_PIN_8
+#define c_control_actuator_GPIO_Port GPIOB
+#define d_control_actuator_Pin GPIO_PIN_9
+#define d_control_actuator_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

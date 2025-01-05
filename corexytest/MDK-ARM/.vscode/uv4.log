@@ -1,12 +1,8 @@
 *** Using Compiler 'V6.22', folder: 'D:\keil\MDK\ARM\ARMCLANG\Bin'
 Build target 'corexytest'
-../BSP/Src/motor.c(68): warning: non-void function does not return a value in all control paths [-Wreturn-type]
-   68 | }
-      | ^
-1 warning generated.
-compiling motor.c...
+compiling task.c...
 linking...
-Program Size: Code=11058 RO-data=450 RW-data=16 ZI-data=1536  
+Program Size: Code=11074 RO-data=450 RW-data=16 ZI-data=1536  
 FromELF: creating hex file...
-"corexytest\corexytest.axf" - 0 Error(s), 1 Warning(s).
+"corexytest\corexytest.axf" - 0 Error(s), 0 Warning(s).
 Build Time Elapsed:  00:00:01

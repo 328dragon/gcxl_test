@@ -326,5 +326,64 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 }
 
 /* USER CODE BEGIN 1 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+//  		if(huart->Instance == TJC_UART_INS)	// 对应huart6，用于串口屏的操作
+//	{
+//		write1ByteToRingBuffer(RxBuffer[0]);
+//		HAL_UART_Receive_IT(&TJC_UART,RxBuffer,1);		// 接收
+//	}
 
+    static uint8_t RXState = 0;
+    static uint8_t RXCount = 0;
+     if(mode==2){    if(huart->Instance == USART1)//检测是否是串口1产生中断，也可以（huart==huart1）这样检测
+    {
+        if(USARTData == 0xff) //接收到包头
+        {
+            RXCount = 0;
+            RXState = 1;
+        } else if(RXState == 1) //如果这里用else if就不包含包头，因为if成立，else if不执行，改if即可。
+        {
+            if(USARTData == 0xfe)//如果检测到包尾
+            {
+                //USARTDataBag[RXCount] = USARTData;想加入包尾就加入这一行
+                RXState = 2;
+            } else
+            {
+                USARTDataBag[RXCount] = USARTData;//数据从缓冲区移入存储区
+                RXCount++;
+            }
+            if(RXCount == 3) //这里固定包长接收方式 收到3个数据后不再接受数据，一直等待包尾，这里可以改
+            {
+                if(USARTData == 0xfe)//如果检测到包尾
+                {
+                    //USARTDataBag[RXCount] = USARTData;//想加入包尾就加入这一行
+                    RXState = 2;
+                }
+            }
+            if(RXState == 2)//状态清零
+            {
+                RX_Flag = 1;
+                RXState = 0; //小细节状态立马成立，所以装态改变放后面，不然标志位不会置1也就接不到数据。
+            }
+        }
+    }
+    HAL_UART_Receive_IT(&huart1, &USARTData,1);//等待中断并接收8位数据，没有就不会接收下一次数据。通过main调用一次等待数据接受，接收到后进入中断继续等待下一次的接受，达到重复等待接受。
+}
+
+/* USER CODE END USART2_IRQn 0 */
+}
+
+int fputc(int ch, FILE *f)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, 0xffff);
+    return ch;
+}
+
+int fgetc(FILE *f)
+{
+    uint8_t ch = 0;
+    HAL_UART_Receive(&huart1, &ch, 1, 0xffff);
+    return ch;
+}
 /* USER CODE END 1 */
