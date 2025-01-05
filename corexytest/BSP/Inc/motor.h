@@ -12,8 +12,8 @@
 #define lmotor_step_off HAL_GPIO_WritePin(LSTEP_GPIO_Port,LSTEP_Pin,0);
 #define rmotor_step_on HAL_GPIO_WritePin(RSTEP_GPIO_Port,RSTEP_Pin,1);
 #define rmotor_step_off HAL_GPIO_WritePin(RSTEP_GPIO_Port,RSTEP_Pin,0);
-#define rmotor_step_on HAL_GPIO_WritePin(RSTEP_GPIO_Port,RSTEP_Pin,1);
-#define rmotor_step_off HAL_GPIO_WritePin(RSTEP_GPIO_Port,RSTEP_Pin,0);
+#define Emotor_step_on HAL_GPIO_WritePin(ESTEP_GPIO_Port,ESTEP_Pin,1);
+#define Emotor_step_off HAL_GPIO_WritePin(ESTEP_GPIO_Port,ESTEP_Pin,0);
 //速度
 extern  int motor_speed;
 extern int x_now;
@@ -21,6 +21,9 @@ extern int y_now;
 #include "main.h"
 void delay_us(uint32_t us);
 void motor_initial();
+int cal_dir(int cur_x,int des_x,int cur_y,int des_y,int m_flag);
+int cal_step(int cur_x,int des_x,int cur_y,int des_y,int n_flag);
+void move_step(int step_l,int step_r );
 void move_xy(int x,int y);
 void move_motor(int x);
 // void move_motor(int x);

@@ -32,6 +32,8 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "motor.h"
+#include "stdio.h"
+#include "math.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -71,6 +73,10 @@ void Error_Handler(void);
 #define LMS2_GPIO_Port GPIOC
 #define LSTEP_Pin GPIO_PIN_11
 #define LSTEP_GPIO_Port GPIOC
+#define RSTEP_Pin GPIO_PIN_12
+#define RSTEP_GPIO_Port GPIOC
+#define RDIR_Pin GPIO_PIN_2
+#define RDIR_GPIO_Port GPIOD
 #define LDIR_Pin GPIO_PIN_3
 #define LDIR_GPIO_Port GPIOB
 #define RMS1_Pin GPIO_PIN_4

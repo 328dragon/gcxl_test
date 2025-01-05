@@ -24,7 +24,7 @@
 "corexytest\stm32f4xx_hal_uart.o"
 "corexytest\system_stm32f4xx.o"
 "corexytest\motor.o"
---strict --scatter "corexytest\corexytest.sct"
+--library_type=microlib --strict --scatter "corexytest\corexytest.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "corexytest.map" -o corexytest\corexytest.axf

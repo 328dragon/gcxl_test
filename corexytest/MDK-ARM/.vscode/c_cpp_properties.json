@@ -3,20 +3,20 @@
         {
             "name": "corexytest",
             "includePath": [
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Core\\Inc",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Drivers\\CMSIS\\Include",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\BSP\\Inc",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Core\\Inc",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Drivers\\STM32F4xx_HAL_Driver\\Inc",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Drivers\\STM32F4xx_HAL_Driver\\Inc\\Legacy",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Drivers\\CMSIS\\Device\\ST\\STM32F4xx\\Include",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Drivers\\CMSIS\\Include",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\BSP\\Inc",
                 "D:\\keil\\MDK\\ARM\\ARMCLANG\\include",
                 "D:\\keil\\MDK\\ARM\\ARMCLANG\\include\\arm_linux",
                 "D:\\keil\\MDK\\ARM\\ARMCLANG\\include\\arm_linux_compat",
                 "D:\\keil\\MDK\\ARM\\ARMCLANG\\include\\libcxx",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\MDK-ARM",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Core\\Src",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\Drivers\\STM32F4xx_HAL_Driver\\Src",
-                "d:\\stmproject\\dragonproject\\gcxl\\gx_pro\\corexytmc2209\\BSP\\Src"
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\MDK-ARM",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Core\\Src",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\Drivers\\STM32F4xx_HAL_Driver\\Src",
+                "d:\\stmproject\\dragonproject\\contest\\gcxl_test\\corexytest\\BSP\\Src"
             ],
             "defines": [
                 "USE_HAL_DRIVER",
